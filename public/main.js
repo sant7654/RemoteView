@@ -1,7 +1,7 @@
 $(function() {
   // Initialize variables
   var username;
-  var socket = io('http://192.168.130.106:5000/');
+  var socket = io('');
 
   sessionStorage.setItem('IMEINumber',window.location.href.slice(window.location.href.indexOf('?') + 1));
 

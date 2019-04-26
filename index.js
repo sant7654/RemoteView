@@ -5,11 +5,11 @@
   var server = require('http').createServer(app);
   var io = require('socket.io')(server);
   var MonGoClient = require('mongodb').MongoClient;
-  var MongoDbUrl  = "mongodb://localhost:27017/"; 
+  var MongoDbUrl  = "mongodb://testremoteview:san1234@ds147746.mlab.com:47746/heroku_vxd92rg2"; 
   var port = process.env.PORT || 5000;
-
+	//testremoteview
   var connect =  MonGoClient.connect(MongoDbUrl,{ useNewUrlParser: true });
-  var dbname  = 'RemoteView';
+  var dbname  = 'heroku_vxd92rg2';
   var collection_name = 'users';
   server.listen(port, () => {
     console.log('Server listening at port %d', port);
