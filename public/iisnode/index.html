@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>iisnode logs</title>
+    <style type="text/css">
+        body
+        {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        td, th
+        {
+            border: 1px solid lightgray;
+            padding: 3px 7px 2px 7px;
+        }
+        th
+        {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: Gray;
+            color: #ffffff;
+        }
+        td.stderr
+        {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <table id="logFilesTable">
+        <tr>
+            <th>
+                Computer name
+            </th>
+            <th>
+                PID
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Link
+            </th>
+        </tr>
+    </table>
+    <p id="lastUpdated"></p>
+    <script type="text/javascript">
+
+        // this is replaced with actual data at runtime by code in interceptor.js
+        var logFiles = [{"file":"CBELAP-025-10528-stderr-1555079938843.txt","computername":"CBELAP-025","pid":10528,"type":"stderr","created":1555079938843},{"file":"CBELAP-025-11080-stderr-1555079931041.txt","computername":"CBELAP-025","pid":11080,"type":"stderr","created":1555079931041},{"file":"CBELAP-025-12044-stderr-1555307588864.txt","computername":"CBELAP-025","pid":12044,"type":"stderr","created":1555307588864},{"file":"CBELAP-025-12356-stderr-1555079662449.txt","computername":"CBELAP-025","pid":12356,"type":"stderr","created":1555079662449},{"file":"CBELAP-025-13600-stderr-1555079688096.txt","computername":"CBELAP-025","pid":13600,"type":"stderr","created":1555079688096},{"file":"CBELAP-025-19948-stderr-1555079652297.txt","computername":"CBELAP-025","pid":19948,"type":"stderr","created":1555079652297},{"file":"CBELAP-025-20204-stderr-1555079930793.txt","computername":"CBELAP-025","pid":20204,"type":"stderr","created":1555079930793},{"file":"CBELAP-025-22404-stderr-1555079678395.txt","computername":"CBELAP-025","pid":22404,"type":"stderr","created":1555079678395},{"file":"CBELAP-025-24580-stderr-1555079966816.txt","computername":"CBELAP-025","pid":24580,"type":"stderr","created":1555079966816},{"file":"CBELAP-025-24900-stderr-1555079928629.txt","computername":"CBELAP-025","pid":24900,"type":"stderr","created":1555079928629},{"file":"CBELAP-025-25028-stderr-1555079673062.txt","computername":"CBELAP-025","pid":25028,"type":"stderr","created":1555079673062},{"file":"CBELAP-025-25232-stderr-1555079653868.txt","computername":"CBELAP-025","pid":25232,"type":"stderr","created":1555079653868},{"file":"CBELAP-025-26112-stderr-1555079667762.txt","computername":"CBELAP-025","pid":26112,"type":"stderr","created":1555079667762},{"file":"CBELAP-025-26216-stderr-1555079931236.txt","computername":"CBELAP-025","pid":26216,"type":"stderr","created":1555079931236},{"file":"CBELAP-025-27604-stderr-1555079600276.txt","computername":"CBELAP-025","pid":27604,"type":"stderr","created":1555079600276},{"file":"CBELAP-025-28288-stderr-1555079918018.txt","computername":"CBELAP-025","pid":28288,"type":"stderr","created":1555079918018},{"file":"CBELAP-025-28616-stderr-1555079657138.txt","computername":"CBELAP-025","pid":28616,"type":"stderr","created":1555079657138},{"file":"CBELAP-025-8812-stderr-1555079691064.txt","computername":"CBELAP-025","pid":8812,"type":"stderr","created":1555079691064}];
+        var lastUpdated = 1555307588997;
+        var date = new Date();
+
+        date.setTime(lastUpdated);
+        document.getElementById('lastUpdated').innerHTML = 'Index was last updated ' + date;
+
+        logFiles.sort(function (a, b) {
+            return b.created - a.created;
+        });
+
+        var logFilesTable = document.getElementById("logFilesTable");
+        for (var i = 0; i < logFiles.length; i++) {
+            var logFile = logFiles[i];
+            date.setTime(logFile.created);
+            var row = logFilesTable.insertRow(-1);
+            var computerNameCell = row.insertCell(0);
+            var pidCell = row.insertCell(1);
+            var typeCell = row.insertCell(2);
+            var dateCell = row.insertCell(3);
+            var logCell = row.insertCell(4);
+            computerNameCell.innerHTML = logFile.computername;
+            pidCell.innerHTML = logFile.pid.toString();
+            typeCell.innerHTML = logFile.type;
+            typeCell.setAttribute('class', logFile.type);
+            dateCell.innerHTML = date.toString();
+            logCell.innerHTML = '<a href="' + logFile.file + '">log</a>';
+        };
+
+    </script>
+</body>
+</html>

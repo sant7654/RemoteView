@@ -1,0 +1,16 @@
+Application has thrown an uncaught exception and is terminated:
+D:\socket\socket.io-master\examples\chat\public\index.html:1
+(function (exports, require, module, __filename, __dirname) { <!doctype html>
+                                                              ^
+
+SyntaxError: Unexpected token <
+    at new Script (vm.js:73:7)
+    at createScript (vm.js:245:10)
+    at Object.runInThisContext (vm.js:297:10)
+    at Module._compile (internal/modules/cjs/loader.js:657:28)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)
+    at Module.load (internal/modules/cjs/loader.js:599:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:530:3)
+    at Module.require (internal/modules/cjs/loader.js:637:17)
+    at require (internal/modules/cjs/helpers.js:20:18)

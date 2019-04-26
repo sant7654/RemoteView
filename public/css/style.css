@@ -1,0 +1,289 @@
+/*
+    ******** This Cascading style sheet writed by team of ux, Logic Valley Technology Pvt Ltd ********
+    
+----------------------------------------------------------------------------------------------------------*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+html {
+    
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    background: #f6f7fc;
+    margin: 0;
+    padding: 0px;
+}
+
+/*---------------------------------------
+  1.0 Gentral
+---------------------------------------*/
+
+
+
+
+
+/*---------------------------------------
+  1.0 Nav Bar 
+---------------------------------------*/
+.bg-light {
+    background-color: #ffffff !important;
+    -webkit-box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.07);
+    -moz-box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.07);
+    box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.07);
+}
+/*---------------------------------------
+  1.1 Nav Menu icon 
+---------------------------------------*/
+.navbar {
+    padding: 0 !important;
+}
+.nav_menu_icon {
+    width: 21px;    
+    cursor: pointer;
+}
+.nav_menu_icon div {
+    height: 2px;
+    margin: 0.225rem 0;
+    border-radius: 5px; 
+    background: #ffffff;
+    transition: .3s;
+}
+.nav_menu_icon .one {
+    width: 21px;
+}
+.nav_menu_icon .two {
+    width: 13px;
+}
+.nav_menu_icon .three {
+    width: 17px;
+}
+.nav_menu_icon:hover div {
+    width: 21px;   
+}
+.nav_brand {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #7a4073;
+    width: 235px;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+.navbar-light .navbar-brand {
+    color: #ffffff;
+}
+
+/*---------------------------------------
+  1. Nav controls 
+---------------------------------------*/
+
+.nav_contents {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 235px;
+    align-items: center;
+    padding: .5rem 1rem;
+}
+.nav_search {
+    flex: 1;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.nav_search .form-group {
+    margin: 10px 0;;
+}
+.has-search .form-control {
+    padding-left: 2.375rem;
+    font-size: .9rem;
+    border-radius: 35px;
+}
+
+.has-search .form-control-search-icon {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    line-height: 2.135rem;
+    text-align: center;
+    pointer-events: none;
+    color: #c5c5c5;
+    font-size: 1rem;
+}
+.nav-controls {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+    align-items: center;
+}
+
+/*---------------------------------------
+  2.0 Main wrap
+---------------------------------------*/
+.main_wrap {
+    display: flex;
+    flex-direction: row;    
+}
+/*---------------------------------------
+  3.0 Side Bar 
+---------------------------------------*/
+.sidebar {
+    background: #ffffff;
+    height: calc(100vh - 56px);
+    width: 235px;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-box-shadow: 10px 0px 40px 0px rgba(0,0,0,0.07);
+    -moz-box-shadow: 10px 0px 40px 0px rgba(0,0,0,0.07);
+    box-shadow: 10px 0px 40px 0px rgba(0,0,0,0.07);
+}
+
+.sidebar_title {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+/*---------------------------------------
+  3.1 Side bar list
+---------------------------------------*/
+.sidebar .menu {
+    height: 90%;
+    position: relative;
+}
+
+.sidebar .menu li {
+    padding: 10px 0px 10px 17px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+.sidebar .menu li .items {
+    flex: 1 1 auto;
+}
+.sidebar .menu li .active_int {
+    width: 30px;
+    height: 100%;
+}
+.sidebar .menu li .active_int i {
+    height: 100%;
+    color: #cbcbcb;;
+}
+.sidebar .menu li .active_int i.active {
+    color: green;
+}
+.sidebar .menu li.active,
+.sidebar .menu li:hover {
+    background: #eaeaea;
+}
+
+.sidebar .menu li i {
+    padding-right:  10px;
+}
+
+/*---------------------------------------
+  4.0 Dashboard Content 
+---------------------------------------*/
+.dash_wrap {
+    flex: 1 1 auto;
+    padding: 1.5rem 1rem;
+}
+
+/*---------------------------------------
+  4.1 Dashboard Top
+---------------------------------------*/
+.dash_wrap .dash_title_wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.dash_wrap .dash_title_wrap .left_cnt,
+.dash_wrap .dash_title_wrap .right_cnt {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.dash_wrap .dash_title_wrap .left_cnt .icon {
+    background: #2567f8;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+.dash_wrap .dash_title_wrap .left_cnt .titles h5,
+.dash_wrap .dash_title_wrap .left_cnt .titles p {
+    margin: 0;
+}
+.dash_wrap .dash_title_wrap .left_cnt .titles h5 {
+    font-weight: 700;
+}
+
+.content-image {
+    width: 100%;
+    height: calc(100vh - 215px);
+    display: flex;
+    justify-content: center;
+}
+.content-image img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.content-refresh {
+    width: 100%;
+    padding: 21px 0;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+}
+.content-refresh i {
+    margin-left: 5px;
+}
+.content-refresh .btn {
+    border-radius: 0;
+}
+
+/*---------------------------------------
+  5.0 Forms
+---------------------------------------*/
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border: 1px solid #ced4da;
+    box-shadow: none;
+  outline: 0 none;
+}
+
+
+/*---------------------------------------
+  6.0 Footer
+---------------------------------------*/
+.footer {
+    
+}
+
